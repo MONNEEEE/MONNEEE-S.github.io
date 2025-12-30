@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>Game Showcase</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #0b0b0f;
+  color: #eaeaea;
+  overflow: hidden;
+}
+
+/* ===== Layout ===== */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* ===== ภาพด้านซ้าย (อยู่กับที่) ===== */
+.game-image {
+  width: 55%;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow:
+    0 0 60px rgba(0,0,0,.7),
+    0 0 120px rgba(255,78,205,.2);
+}
+
+.image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== Gradient Overlay (HoYoverse) ===== */
+.image-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,0.1) 0%,
+      rgba(0,0,0,0.75) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,78,205,0.35),
+      rgba(143,91,255,0.25),
+      rgba(0,180,255,0.15)
+    );
+  pointer-events: none;
+}
+
+/* ===== ข้อความด้านขวา (เลื่อน) ===== */
+.game-info {
+  width: 45%;
+  height: 100vh;
+  padding: 50px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.game-info h1 {
+  margin-top: 0;
+  font-size: 34px;
+  color: #ffcc00;
+}
+
+.game-info p {
+  line-height: 2;
+  font-size: 16px;
+  margin-bottom: 28px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- รูปด้านซ้าย -->
+  <div class="game-image">
+    <div class="image-wrap">
+      <img src="https://i.imgur.com/9Xn3K5G.jpg" alt="Game Image">
+    </div>
+  </div>
+
+  <!-- ข้อความด้านขวา -->
+  <div class="game-info">
+    <h1>Zenless Zone Zero</h1>
+
+    <p>
+      Zenless Zone Zero เป็นเกม Action RPG สไตล์อนิเมะจาก HoYoverse
+      ที่เน้นการต่อสู้ความเร็วสูง
+      และงานภาพแนวไซเบอร์ผสมแฟนตาซี
+    </p>
+
+    <p>
+      ผู้เล่นจะได้ควบคุมตัวละครหลายตัว
+      สลับการโจมตีแบบคอมโบ
+      พร้อมเนื้อเรื่องเข้มข้นและโลกที่มีเอกลักษณ์
+    </p>
+
+    <p>
+      ลองเลื่อนลงดู →
+      จะเห็นว่ารูปฝั่งซ้ายยังอยู่ที่เดิม
+      ไม่ขยับตามการเลื่อน
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+
+    <p>
+      โครงแบบนี้เหมาะกับหน้า:
+      รีวิวเกม / แนะนำเกม / หน้าเปิดตัว / Launcher
+    </p>
+
+    <p>
+      สามารถเพิ่มวิดีโอ Trailer
+      ปุ่ม Download
+      หรือข้อมูลสเปคเครื่องต่อด้านล่างได้
+    </p>
+  </div>
+
+</div>
+
+</body>
+</html>
